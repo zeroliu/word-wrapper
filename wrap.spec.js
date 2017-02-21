@@ -28,5 +28,9 @@ describe('word wrapper', () => {
   it('wraps just before word boundary', () => {
     expect(wrap('word word', 4)).toEqual('word\nword');
   });
+
+  it('wraps two words well just before word boundary', () => {
+    expect(wrap('word word word', 9)).toEqual('word word\nword');
+  });
 });
 

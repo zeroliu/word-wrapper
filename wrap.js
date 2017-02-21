@@ -7,10 +7,10 @@ const wrap = function(s, col = 0) {
     return s;
   }
   const space = s.substring(0, col).lastIndexOf(' ');
-  if (space !== -1) {
-    return breakLine(space, 1);
-  } else if (s.charAt(col) === ' ') {
+  if (s.charAt(col) === ' ') {
     return breakLine(col, 1);
+  } else if (space !== -1) {
+    return breakLine(space, 1);
   }
   return breakLine(col, 0);
 };
